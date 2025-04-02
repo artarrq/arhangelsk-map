@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e8f5e9 100%);
+  color: #333;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  background: linear-gradient(45deg, #2c7a47, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+}
+
+#map {
+  width: 95%;
+  height: 700px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 3px solid #4CAF50;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Стили для балунов */
+.ymaps-balloon {
+  font-family: Arial, sans-serif !important;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+}
+
+.ymaps-balloon__content {
+  padding: 20px !important;
+  max-width: 300px;
+  background: #f8fff9 !important;
+  border-radius: 15px !important;
+}
+
+.ymaps-balloon__content img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.ymaps-balloon__content h3 {
+  margin: 0 0 15px 0 !important;
+  color: #2c7a47 !important;
+  font-size: 1.2em !important;
+}
+
+/* Анимации и эффекты */
+.ymaps-2-1-79-placemark-overlay {
+  transition: transform 0.3s ease;
+  cursor: pointer !important;
+}
+
+.ymaps-2-1-79-placemark-overlay:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+#map:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+    margin: 15px 0;
+  }
+  
+  #map {
+    height: 500px;
+    width: 98%;
+  }
+  
+  .ymaps-balloon__content {
+    max-width: 200px !important;
+    padding: 10px !important;
+  }
+  
+  .ymaps-balloon__content img {
+    max-width: 180px !important;
+  }
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4CAF50;
+  border-radius: 4px;
+}
